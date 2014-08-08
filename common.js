@@ -8,6 +8,12 @@ function highlightSQL() {
 	highlightme(k);
 };
 
+$(function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  });
+
 function highlightme(k) {
 	
 	//adding lowercase keyword support

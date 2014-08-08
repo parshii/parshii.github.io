@@ -3,12 +3,25 @@
 <title>Hightlighted Syntax</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+
 <script src="common.js"></script>
 
 <body>
 <!-- textarea to contain the raw sql -->
-<textarea placeholder="Enter your SQL Query here" onkeyup="highlightSQL()" id="highlight" name="highlight" >
-</textarea>
+<div id="accordion">
+  <h3>SQL HIGHLIGHTER</h3>
+  <div>
+    <textarea placeholder="Enter your SQL Query here" onkeyup="highlightSQL()" id="highlight" name="highlight" >
+	</textarea>
+  </div>
+  <h3>JAVASCRIPT HIGHLIGHTER</h3>
+  <div>
+   <p>Coming Soon</p>
+  </div>
+</div>
+
 <label>Output</label>
 <!-- pre tag to contain the highlighted code -->
 <pre id="layer"></pre>
