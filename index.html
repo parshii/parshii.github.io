@@ -26,20 +26,28 @@
   </div>
 </div>
 
-<span class="classlabel">Output</span>
-<span style="margin-left: 100px; cursor: copy" 
+
+
+<div class="prediv" onmouseover="setCopy('inline')" onmouseout="setCopy('none')">
+
+<span id="output" class="classlabel">Output - Hover on content for more options</span>
+<span style="" 
 data-clipboard-target='layer' id="copyClipboard"
-class="classlabel" onclick="copyContent()">Copy As Plain text</span>
-<span style="margin-left: 300px;" id="copyClipboard"
-class="classlabel">Use Ctrl + C for text with highlights</span>
+class="classlabel copy1" onclick="copyContent()">Click to copy As Plain text</span>
+<span id="manualCopy"
+class="classlabel copy2">Use Ctrl + C (manual copy) for text with highlights</span>
 <!-- pre tag to contain the highlighted code -->
-<pre id="layer"></pre>
+<pre id="layer" class="highlightedText">
+</pre>
+
+</div>
+
 
 </body>
-<footer class="classfooter">
+<header class="classfooter">
 <span>
 Harshit Rastogi aka parshii |
 </span>
 <a href="https://github.com/parshii/">Fork me<a>
-</footer>
+</header>
  </html>

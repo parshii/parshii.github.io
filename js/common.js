@@ -5,6 +5,14 @@ var sql = $("#highlight");
 var js = $("#highlightjs");
 sql.text("");
 js.text("");
+$.notify("Hi All, the JavaScript Highlighter is still in progress. It will work but not perfectly.",
+ {
+ position:"left middle",
+ className: "info",
+ autoHideDelay: 10000,
+ hideDuration: 500
+ }
+ );
 });
 
 function copyContent(){
@@ -20,6 +28,12 @@ var content = $('#layer').text();
 	$("#copyClipboard").notify("Data is copied", "success");
 	}
 		
+};
+
+function setCopy(state) {
+document.getElementById('copyClipboard').style.display = state;
+document.getElementById('manualCopy').style.display = state;
+
 };
 
 function highlightSQL() {
@@ -72,7 +86,7 @@ var k =
 "DOCUMENT"
 ];
 
-	var c = $("#highlightjs").val(); //raw code
+	var c = $("#highlightjs").val(); //raw code		
 	highlightme(k, c);
 };
 
