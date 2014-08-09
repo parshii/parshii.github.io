@@ -1,7 +1,6 @@
 <!-- jquery -->
 
 $(document).ready(function(){
-
 var sql = $("#highlight");
 var js = $("#highlightjs");
 sql.text("");
@@ -14,7 +13,12 @@ var content = $('#layer').text();
   var clip = new ZeroClipboard($("#copyClipboard"), {
       moviePath: "http://ajax.cdnjs.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.swf"
     });
+	if(clip.id === '0'){
+	$("#copyClipboard").notify("Data is not copied, click again", "error");
+	}
+	else{
 	$("#copyClipboard").notify("Data is copied", "success");
+	}
 		
 };
 
