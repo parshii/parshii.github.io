@@ -1,5 +1,13 @@
 <!-- jquery -->
 
+$(document).ready(function(){
+
+var sql = $("#highlight");
+var js = $("#highlightjs");
+sql.text("");
+js.text("");
+});
+
 function highlightSQL() {
 //full list of reserved words: http://dev.mysql.com/doc/refman/5.0/en/reserved-words.html
 	var k = 
