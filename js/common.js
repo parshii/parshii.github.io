@@ -30,8 +30,8 @@ var content = $('#layer').text();
 		
 };
 
-function setCopy(state) {
-document.getElementById('copyClipboard').style.display = state;
+function setCopy(state){
+//document.getElementById('copyClipboard').style.display = state;
 document.getElementById('manualCopy').style.display = state;
 
 };
