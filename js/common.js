@@ -8,6 +8,14 @@ sql.text("");
 js.text("");
 });
 
+function copyContent(){
+//http://ajax.cdnjs.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.swf
+var content = $('#layer').text();
+  var clip = new ZeroClipboard($("#copyClipboard"), {
+      moviePath: "http://ajax.cdnjs.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.swf"
+    });
+};
+
 function highlightSQL() {
 //full list of reserved words: http://dev.mysql.com/doc/refman/5.0/en/reserved-words.html
 	var k = 

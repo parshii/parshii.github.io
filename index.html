@@ -5,8 +5,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.min.js"></script>
 
-<script src="common.js"></script>
+<script src="js/common.js"></script>
+
 
 <body>
 <!-- textarea to contain the raw sql -->
@@ -23,9 +25,13 @@
   </div>
 </div>
 
-<label class="classlabel">Output</label>
+<span class="classlabel">Output</span>
+<span style="padding-left: 100px; cursor: copy" 
+data-clipboard-target='layer' id="copyClipboard"
+class="classlabel" onclick="copyContent()">Copy</span>
 <!-- pre tag to contain the highlighted code -->
 <pre id="layer"></pre>
+
 </body>
 <footer class="classfooter">
 <pre>
