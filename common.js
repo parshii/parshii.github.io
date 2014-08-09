@@ -49,7 +49,13 @@ var k =
 "VAR",
 "VOID",
 "WHILE",
-"WITH"
+"WITH",
+"TARGET",
+"A",
+"HREF",
+"WINDOW",
+"ONLOAD",
+"DOCUMENT"
 ];
 
 	var c = $("#highlightjs").val(); //raw code

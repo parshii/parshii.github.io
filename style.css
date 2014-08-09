@@ -23,8 +23,17 @@ body {padding: 30px;}
 	
 	white-space: pre-wrap; /*to wrap words*/
 	word-wrap: break-word; /*IE 5.5+*/
+	margin-bottom: -100px
 }
 
+#layer:after {
+  content: "";
+  display: block;
+}
+.classfooter, .layer:after {
+  /* .push must be the same height as footer */
+  height: 100px; 
+}
 /*colors*/
 .sc {color: brown;}
 .keyword {color: blue;}
@@ -44,6 +53,16 @@ body {padding: 30px;}
 	font-size: 14px;
 	line-height: 20px;	
 	border: 1px solid #ccc;
-	
 
+}
+
+.classlabel{
+
+	font-family: consolas;
+	font-size: 14px;
+	line-height: 20px;
+	padding-top:14px;
+	padding-left: 10px;
+	position:absolute;
+	text-decoration: underline;
 }
