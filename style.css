@@ -1,5 +1,8 @@
 * {padding: 0;}
 body {padding: 30px;}
+h3{
+color: green !important;
+}
 
 #highlight ,
 #highlightjs
@@ -26,14 +29,6 @@ body {padding: 30px;}
 	margin-bottom: -100px
 }
 
-#layer:after {
-  content: "";
-  display: block;
-}
-.classfooter, .layer:after {
-  /* .push must be the same height as footer */
-  height: 100px; 
-}
 /*colors*/
 .sc {color: brown;}
 .keyword {color: blue;}
@@ -43,7 +38,7 @@ body {padding: 30px;}
 
 .classfooter{
 
-	bottom: 10px; 
+	top: 0px; 
 	right:40px; 
 	width:auto;
 	text-align: center;
