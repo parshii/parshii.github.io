@@ -14,6 +14,8 @@ var content = $('#layer').text();
   var clip = new ZeroClipboard($("#copyClipboard"), {
       moviePath: "http://ajax.cdnjs.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.swf"
     });
+	$("#copyClipboard").notify("Data is copied", "success");
+		
 };
 
 function highlightSQL() {
