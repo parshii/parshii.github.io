@@ -155,8 +155,7 @@ function highlightme(k, c) {
 	}
 	
 	//comments - tricky...
-	//comments starting with a '#'
-	c = c.replace(/(#.*?\n)/g, clear_spans);
+	//comments starting with a '#'	
 	
 	//comments starting with '-- '
 	//first we need to remove the spans applied to the '--' as a special char
