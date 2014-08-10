@@ -5,15 +5,20 @@ var sql = $("#highlight");
 var js = $("#highlightjs");
 sql.text("");
 js.text("");
-$.notify("Hi All, the JavaScript Highlighter is still in progress. It will work but not perfectly.",
- {
- position:"left middle",
- className: "info",
- autoHideDelay: 10000,
- hideDuration: 500
- }
- );
+showWarning();
+	
 });
+
+function showWarning(){
+$.notify("Hi All, the JavaScript Highlighter is still in progress. It will work but not perfectly.",
+			{
+			position:"left middle",
+			className: "info",
+			autoHideDelay: 10000,
+			hideDuration: 500
+			}
+		)
+};
 
 function copyContent(){
 //http://ajax.cdnjs.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.swf
@@ -51,6 +56,7 @@ function highlightSQL() {
 function highlightJS(){
 var k =
 [
+
 "BREAK",
 "CASE",
 "CLASS",
@@ -92,15 +98,20 @@ var k =
 ];
 
 	var c = $("#highlightjs").val(); //raw code		
-	highlightme(k, c);
+	highlightme(k, c);	
+
 };
 
 $(function() {
     $( "#accordion" ).accordion({
       collapsible: true,
 	  active: false
-    });
+    });	
+	
   });
+  
+
+  	
   
 function highlightme(k, c) {
 	
