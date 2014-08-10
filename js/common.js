@@ -36,10 +36,15 @@ document.getElementById('manualCopy').style.display = state;
 
 };
 
+function capitaliseFirstLetter(string)
+{
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+};
+
 function highlightSQL() {
 //full list of reserved words: http://dev.mysql.com/doc/refman/5.0/en/reserved-words.html
 	var k = 
-	["AND", "AS", "USE", "ASC", "GROUP", "BETWEEN", "BY", "CASE", "CURRENT_DATE", "CURRENT_TIME", "DELETE", "DESC", "DISTINCT", "EACH", "ELSE", "ELSEIF", "FALSE", "FOR", "FROM", "GROUP", "HAVING", "IF", "IN", "INSERT", "INTERVAL", "INTO", "IS", "JOIN", "KEY", "KEYS", "LEFT", "LIKE", "LIMIT", "MATCH", "NOT", "NULL", "ON", "OPTION", "OR", "ORDER", "OUT", "OUTER", "REPLACE", "RIGHT", "SELECT", "SET", "TABLE", "THEN", "TO", "TRUE", "UPDATE", "VALUES", "WHEN", "WHERE"];
+	["INT", "PROC", "UPDATE","DATE", "END", "ALTER","BEGIN","AND", "AS", "USE", "ASC", "GROUP", "BETWEEN", "BY", "CASE", "CURRENT_DATE", "CURRENT_TIME", "DELETE", "DESC", "DISTINCT", "EACH", "ELSE", "ELSEIF", "FALSE", "FOR", "FROM", "GROUP", "HAVING", "IF", "IN", "INSERT", "INTERVAL", "INTO", "IS", "JOIN", "KEY", "KEYS", "LEFT", "LIKE", "LIMIT", "MATCH", "NOT", "NULL", "ON", "OPTION", "OR", "ORDER", "OUT", "OUTER", "REPLACE", "RIGHT", "SELECT", "SET", "TABLE", "THEN", "TO", "TRUE", "UPDATE", "VALUES", "WHEN", "WHERE"];
 	var c = $("#highlight").val(); //raw code
 	highlightme(k, c);
 };
@@ -101,10 +106,11 @@ function highlightme(k, c) {
 	
 	//adding lowercase keyword support
 	var len = k.length;
-	for(var i = 0; i < len; i++)
-	{
-		k.push(k[i].toLowerCase());
-	}
+	 for(var i = 0; i < len; i++)
+	 {
+		 k.push(k[i].toLowerCase());
+		 k.push(capitaliseFirstLetter(k[i]));
+	 }
 	
 	var re;
 		
@@ -131,8 +137,9 @@ function highlightme(k, c) {
 	{
 		//regex pattern will be formulated based on the array values surrounded by word boundaries. since the replace function does not accept a string as a regex pattern, we will use a regex object this time
 		re = new RegExp("\\b"+k[i]+"\\b", "g");
+		re.ignoreCase = true;
 		if(k[i] !== "class"){
-		c = c.replace(re, "<span class=\"keyword\">"+k[i]+"</span>");
+			c = c.replace(re, "<span class=\"keyword\">"+k[i]+"</span>");
 		}
 	}
 	
